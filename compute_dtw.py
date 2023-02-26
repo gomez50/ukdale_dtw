@@ -4,20 +4,7 @@ import numpy as np
 
 @jit(nopython=True)
 def dtw(X, Y):
-    """
-    This method is implemented using arrays in order to make use of NUMBA,
-    as NUMBA doesnot work with pandas and some statistical operations
-    Simply using already defined packages that computes dtw were not fast enough to compute DTW for all activities in nested loops
-    
-    Parameters 
-    ----------
-    X : numpy.ndarray
-    Y : numpy.ndarray
-            two sequence arrays of values that may not be of equal length 
-        
-    returns: float 
-            top right most value of the computed cost matrix
-    """
+
     
     ROWS = X.shape[0]
     COLUMNS = Y.shape[0]
